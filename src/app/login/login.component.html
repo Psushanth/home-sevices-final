@@ -1,0 +1,51 @@
+<div class="backgrnd">
+<div class="container ">
+    <div class="row ">
+        <div class="col-3"></div>
+        <div class="col-6 mt-5 ">
+            <form [formGroup]="loginForm"  class="form p-5 mt-5 border rounded-3 bg-color" (ngSubmit)="onSubmit()">
+               <div class="text-center">
+                <div class="form-check form-check-inline form-switch p-4">
+                    <input class="form-check-input" type="radio" id="user" name="usertype" value="user" formControlName="usertype" >
+                    
+                    <label class="form-check-label" for="user"><h5>User</h5></label>
+                  </div>
+                  <div class="form-check form-check-inline form-switch p-4">
+                    <input class="form-check-input" type="radio" id="admin" name="usertype" value="admin" formControlName="usertype">
+                    <label class="form-check-label" for="admin"><h5>Admin</h5></label>
+                  </div>
+                  <div *ngIf="getControls().usertype.touched && getControls().usertype.invalid" class="alert alert-danger">
+                    <div *ngIf="getControls().usertype.errors?.required">Name is required.</div>
+                </div>
+                </div>
+               
+            
+                <div class="form-floating mb-3">
+                   <input type="text" class="form-control " id="name" name="name" formControlName="name" >
+                   <div *ngIf="(getControls().name.pristine  || getControls().name.invalid) && (getControls().name.dirty ||  getControls().name.touched)"
+                   class=" text-danger">
+                   <p *ngIf="getControls().name.errors?.required">*Name is required.</p>
+                   <p  *ngIf="getControls().name.errors?.minlength">Name must be at least 4 characters long.</p>
+                   
+                </div>
+                <label for="adminname " class="usertext">User Name</label>
+            </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" name="password" formControlName="password" >
+                    <div *ngIf="(getControls().password.pristine  || getControls().password.invalid) && (getControls().password.dirty ||  getControls().password.touched)"
+                    class="text-danger">
+                    <p *ngIf="getControls().password.errors?.required">*Password is required.</p>
+                    </div>
+                    <label for="password" class="usertext">Password</label>
+                  </div>
+                  <div class="text-center">
+                      <button class="btn btn-style" value="submit">Login</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<router-outlet></router-outlet>

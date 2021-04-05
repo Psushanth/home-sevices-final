@@ -1,0 +1,76 @@
+
+
+.head-banner{
+  background-color:#e6ad27
+
+}
+.head-banner p{
+  text-align: center;
+}
+.navbar{
+  background-color: #c4bceb;
+
+}
+.text-block {
+    position: absolute;
+    border-radius: 15px;
+ 
+    background: linear-gradient(#6d7d80a2,#0d222c98);
+    color:rgb(255, 255, 255);
+   
+     padding: 22px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  }
+  .text-block h4{
+    text-align: center;
+    margin-bottom: 1px;
+  }
+  select{
+      width:300px; 
+       height:50px;
+     margin:10px;
+    border-radius:10px;
+     padding-left: 30px;
+     padding-right: 30px;
+  
+  }
+  option{
+      border-radius: 10px;
+  }
+
+.container1{
+
+    max-width: 1350px;
+    margin: auto;
+    height: 600px;
+    background-image: url("../../assets/images/homeimage2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.container2{
+
+  max-width: 1350px;
+  margin: auto;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.container3{
+  max-width: 1350px;
+  margin: auto;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+.container4{
+  
+  background: linear-gradient(#6d7d80,#0d222c98);
+  
+}
+

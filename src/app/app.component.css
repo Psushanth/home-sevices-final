@@ -1,0 +1,17 @@
+*{
+    color:azure;
+    font-family:'Neuton', serif;
+    font-weight:500;
+    font-size:23px;
+   
+}
+.bg-color{
+    background: linear-gradient(#6d7d80,#0d222c);
+}
+.navbar-brand:hover{
+    color: rgb(255, 255, 255);
+}
+.nav-link:hover{
+    color: rgb(118, 216, 208);
+    
+}

@@ -1,0 +1,108 @@
+<style>
+    .container {
+      margin: auto;
+      width: 60%;
+      padding: 50px;
+     color: rgb(243, 242, 236);
+    }
+    .background{
+      background-image: url("../../assets/images/backgrnd\ login.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 800px;
+      background-color: rgba(0, 0, 0, 0.404);
+  
+    }
+      .btn-style{
+       
+    border-radius: 40px;
+    background:linear-gradient(to left, rgb(23, 60, 226) , rgb(65, 173, 223) );
+    padding: 3px 40px;
+    color: rgb(251, 251, 251);
+    border-color: darkblue;
+}
+.btn-style:hover{
+    background:linear-gradient(to left, rgb(9, 30, 126) , rgb(19, 84, 114) );
+}
+     
+    
+    .color-form{
+      background: linear-gradient(to bottom, rgb(61, 89, 122) 50%, rgb(17, 36, 61) 75%);
+      
+    }
+    </style>
+  <div class="background">
+<div class="container">
+  <div class="row">
+    <div class="col-5"></div>
+      <div class="col-7">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="border rounded-3 p-5 color-form">
+          <div class="text-center">
+          <div class="form-check form-check-inline form-switch mr-3">
+              <input class="form-check-input" type="radio" name="usertype" value="user" id="u" formControlName="usertype">
+              <label class="form-check-label " for="u">
+               <h3> User</h3>     
+                </label>
+            </div>
+            <div class="form-check form-check-inline form-switch">
+              <input class="form-check-input" type="radio" name="usertype" value="admin" id="a" formControlName="usertype" >
+              <label class="form-check-label" for="a">
+               <h3>Admin</h3>
+              </label>
+            </div>
+          </div>
+<!--username-->
+            <div class="form-group mt-3">
+              <label for="u"><h5>Username</h5></label>
+              <input type="text" class="form-control mt-2 mb-3 " id="u"  placeholder="Username" formControlName="name" autocomplete="off">
+            </div>
+            <!--username validations-->
+               
+      <div class="text-danger"*ngIf="submitted||getControls().name.invalid && (getControls().name.dirty ||getControls().name.touched) ">
+        <div><p *ngIf=" getControls().name.errors?.required">*Please enter Username</p></div>
+        <p *ngIf= "getControls().name.errors?.minlength">*Username should have min 5 chars</p>
+        <p *ngIf= "getControls().name.errors?.maxlength">*Username should have max 30 chars</p>
+        <p *ngIf= "getControls().name.errors?.pattern">*Username accepts only alphabets</p>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------->
+    
+    
+
+    <!--password-->
+    <div class="form-group mb-3">
+              <label for="pwd" ><h5>Password</h5></label>
+              <input type="password" class="form-control mt-2 mb-3" id="pwd" placeholder="Password" formControlName="password" autocomplete="off">
+            </div>
+
+<!--password validation-->
+
+            <div class="text-danger"*ngIf="submitted||getControls().password.invalid && (getControls().password.dirty ||getControls().password.touched) ">
+                <p *ngIf=" getControls().password.errors?.required">*Please Enter Password</p>
+                <p *ngIf= "getControls().password.errors?.pattern">*Password should contain Numbers and alphabet</p>
+             </div>
+
+
+<!---------------------------------------------------------------------------------------------------------------->
+            
+           <!--Email-->
+              <div class="form-group">
+                <label for="email" ><h5>Email</h5></label>
+                <input type="email" class="form-control mt-2" id="email" placeholder="Email" formControlName="email" >
+              </div>
+
+              <!--Email validation-->
+              <div class="text-danger"*ngIf="submitted||getControls().email.invalid && (getControls().email.dirty ||getControls().email.touched) ">
+                <p *ngIf=" getControls().email.errors?.required">*Please Enter Email</p>
+                <p *ngIf=" getControls().email.errors?.email">*Please Enter Valid Email</p>
+             </div>
+<!------------------------------------------------------------------------------------------------------------------------>
+           <div class="text-center"> <button type="submit" class="btn btn-style mt-3 ">Register</button></div>
+
+
+
+          </form>
+          </div>
+          
+          </div>
+        </div>

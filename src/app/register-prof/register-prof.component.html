@@ -1,0 +1,87 @@
+<style>
+    .container {
+        margin: auto;
+        width: 50%;
+        padding: 50px;
+        
+    
+    }
+    .bg-color{
+        background: linear-gradient(#6d7d80a2,#0d222c98);
+    height:800px;
+    }
+</style>
+<div class="bg-color">
+<div class="container">
+    <div class="row ml-5">
+<div class="col-xs-4 ">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-floating mb-3">
+            <input type="text" id="name" class="form-control" formControlName="name" name="name" >
+            
+            <div *ngIf="(getControls().name.pristine  || getControls().name.invalid) && (getControls().name.dirty ||  getControls().name.touched)"
+            class="alert alert-danger">
+            <p *ngIf="getControls().name.errors?.required">Name is required.</p>
+            <p  *ngIf="getControls().name.errors?.minlength">Name must be at least 5 characters long.</p>
+            <p  *ngIf="getControls().name.errors?.pattern">Only Alphabet are allowed.</p>
+            
+            
+        </div>
+        <label for="name"><h6>Name</h6></label>
+
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" id="email" class="form-control" formControlName="email" name="email" >
+            
+            <div *ngIf="(getControls().email.pristine  || getControls().email.invalid) && (getControls().email.dirty ||  getControls().email.touched)"
+            class="alert alert-danger">
+            <p *ngIf="getControls().email.errors?.required ">E-mail is required.</p>
+            <p *ngIf="getControls().email.errors?.email ">* Valid E-mail is required.</p>
+            
+        </div>
+        <label for="email"><h6>E-mail</h6></label>
+        </div>
+        
+            <div class="form-floating mb-3">
+                <select class="form-select" name="locations" id="locations" formControlName="locations" autocomplete="off" >
+                    <option [value]="location"  *ngFor="let location of locationsarray">{{location}}</option>
+                </select>
+                <div *ngIf="(getControls().locations.pristine  || getControls().locations.invalid) && (getControls().locations.dirty ||  getControls().locations.touched)"
+                class="alert alert-danger">
+                <p *ngIf="getControls().locations.errors?.required">Location is required.</p>
+                
+            </div>
+            <label for="locations"><h6>Select Location</h6></label>
+        </div>
+        
+
+            <div class="form-floating mb-3">
+                <select class="form-select" name="skills" id="skills" formControlName="skills" autocomplete="off">
+                    <option [value]="skill"  *ngFor="let skill of skillsarray">{{skill}}</option>
+                </select>
+                <div *ngIf="(getControls().skills.pristine  || getControls().skills.invalid) && (getControls().skills.dirty ||  getControls().skills.touched)"
+                class="alert alert-danger">
+                <p *ngIf="getControls().skills.errors?.required">Skills are required</p>
+                
+            </div>
+            <label for="skills"><h6>Select Skill</h6></label>
+            </div>
+           
+            <div class="form-floating mb-3">
+                <input type="text" id="mobilenumber" class="form-control" formControlName="mobilenumber" name="mobilenumber" >
+                <div *ngIf="(getControls().mobilenumber.pristine  || getControls().mobilenumber.invalid) && (getControls().mobilenumber.dirty ||  getControls().mobilenumber.touched)"
+                class="alert alert-danger">
+                <p *ngIf="getControls().mobilenumber.errors?.required">Name is required.</p>
+                <p *ngIf="getControls().mobilenumber.errors?.pattern || getControls().mobilenumber.errors?.minlength ||
+                getControls().mobilenumber.errors?.maxlength">Mobile Number Should only be 10 numbers.</p>
+                
+            </div>
+            <label for="mobilenumber"><h6>Mobile No</h6></label>
+            </div>
+        <button type="submit" class="btn btn-success mt-3">Register</button>
+    </form>
+      </div>
+    </div>
+    </div>
+</div>
+<footer></footer>

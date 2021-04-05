@@ -1,0 +1,23 @@
+.backgrnd{
+    background-image: url("../../assets/images/carpenter-doing-calculation.jpg");
+ height: 800px;
+ background-size: cover;
+ background-position: center;
+}
+.bg-color{
+    color: rgb(250, 248, 242);
+  background: linear-gradient(to bottom, rgb(61, 89, 122) 50%, rgb(17, 36, 61) 75%);
+}
+.usertext{
+    color:black;
+}
+.btn-style{
+    border-radius: 40px;
+    background:linear-gradient(to left, rgb(23, 60, 226) , rgb(65, 173, 223) );
+    padding: 3px 40px;
+    color: rgb(251, 251, 251);
+    border-color: darkblue;
+}
+.btn-style:hover{
+    background:linear-gradient(to left, rgb(9, 30, 126) , rgb(19, 84, 114) );
+}

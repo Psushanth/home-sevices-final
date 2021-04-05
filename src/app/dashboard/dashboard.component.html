@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-3">
+            <h4>Hello {{username}}!!, Welcome to your Dashboard</h4>
+        </div>
+        <div class="col-5"></div>
+        <div class="col-2 my-3"><button class="btn btn-primary mr-4" (click)="bookings()">My Bookings</button></div>
+        <div class="col-2 my-3">
+          <router-outlet></router-outlet>
+           <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-evenly mt-5" >
+      <div class="col-4" *ngFor="let service of servicesArray">
+        <div class="card mt-5" style="width: 23rem; ">
+            <img [src]="service?.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title text-center">{{service?.subservice}}</h4>
+              <h5 class="card-text text-center ">Price: {{service?.price}}</h5>
+              <p class="card-text text-center">{{service?.discreption}}</p>
+              <div class="text-center">
+                <button class="btn btn-primary " (click)="addtocart(service)">ADD</button>
+                
+              </div>
+
+              
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

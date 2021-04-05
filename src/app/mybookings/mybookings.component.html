@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h2 class="text-center mt-5">Your Bookings</h2>
+<div class="d-flex flex-wrap justify-content-around mt-5" >
+    <div class="col-3 m-5" *ngFor="let service of cartitemsobj">
+      <div class="card" style="width: 23rem;">
+          <img [src]="service?.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title text-center m-3">{{service?.subservice}}</h4>
+            <h5 class="card-title text-center m-3">Price:    {{service?.price}}</h5>
+            <a  class="btn btn-primary text-center m-3" (click)="deletefrmcart(service)">DELETE</a>
+          </div>
+        </div>
+    </div>
+  </div></div>
+  <div *ngIf = "!cartitemsobj?.length">
+    <h4 class="text-center text-danger mt-5">No products found in cart</h4>
+  </div>
+
