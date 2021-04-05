@@ -107,4 +107,10 @@ servicesApiObj.get("/getservices/:serviceId",errorHandler(async (req,res)=>{
     
 }))
 
+servicesApiObj.get("/getmainservices/:location",errorHandler(async (req,res)=>{
+    let servicesinlocation=await Services.findOne({ location:req.params.location})
+    console.log(servicesinlocation)
+     res.send({message:servicesinlocation})
+ }))
+
 module.exports=servicesApiObj;

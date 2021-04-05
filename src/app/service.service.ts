@@ -49,4 +49,7 @@ return this.hc.get(`/cart/getservicesfrmcart/${username}`)
    updateservices(serviceObj):Observable<any>{
         return this.hc.put("/services/updateservice",serviceObj)
       }
+      getmainservices(location):Observable<any>{
+        return this.hc.get(`/services/getmainservices/${location}`)
+          }
 }

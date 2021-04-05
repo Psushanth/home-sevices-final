@@ -16,8 +16,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
   }
-submittedLocation(location){
 
+formsubmit(ref){
+  let locationObj=ref.value
+console.log(ref.value)
+ this.router.navigateByUrl(`/mainservices/${this.users.indexOf(locationObj.location)}`)
 }
-
 }

@@ -7,14 +7,19 @@
        
        <h4>Where do you need a service?</h4>
 
-<div class="form-group mt-2">
+<form #ref="ngForm" (ngSubmit)="formsubmit(ref)">
    <div class="form-floating">
-<select class="form-select" name="location" id="floatingSelect" ngModel>
-  <option [value]=users *ngFor="let user of users">{{user}}</option>
-</select>
-<label for="floatingSelect" ><h5>Select city</h5></label>
+      <select class="form-select" name="location" id="floatingSelect" ngModel>
+         <option [value]="user" *ngFor="let user of users"  selected>{{user}}</option>
+      </select>
+      <label for="floatingSelect" ><h5>Select city</h5></label>
+      <div class="text-center">
+      <button id="button-color" value="submit btn btn-success" >
+         search
+</button></div>
 </div>
-</div>
+</form>
+
 </div>
 </div>
 

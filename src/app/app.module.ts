@@ -14,11 +14,12 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminaddservicesComponent } from './adminaddservices/adminaddservices.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HomelocationComponent } from './homelocation/homelocation.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { UpdateComponent } from './update/update.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {ToastrModule} from 'ngx-toastr'
+import {ToastrModule} from 'ngx-toastr';
+import { MainservicesComponent } from './mainservices/mainservices.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +31,10 @@ import {ToastrModule} from 'ngx-toastr'
     MybookingsComponent,
     PagenotfoundComponent,
     AdminaddservicesComponent,
-    HomelocationComponent,
+
     FooterComponent,
-    UpdateComponent
+    UpdateComponent,
+    MainservicesComponent
   ],
   imports: [
     BrowserModule,
