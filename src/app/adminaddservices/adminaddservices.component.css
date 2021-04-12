@@ -1,11 +1,71 @@
+*{
+   font-family:'Neuton', serif;
+   font-weight:500;
+   font-size:20px;
+   letter-spacing: 0.5pt;
+   word-spacing: 1pt;
+  
+ }
+ footer{
+   clear: both;
+   position: relative;
+   height: 200px;
+   margin-top: -200px;
+ }
+.backgrnd{
 
+    background-image: url("https://www.lsi-media.com/wp-content/uploads/2019/10/Amazon.jpg");
+ height: 600px;
+ 
+ background-size: cover;
+ background-position: center;
+}
+.bg-color{
+    color: rgb(250, 248, 242);
+  background: linear-gradient(to bottom, rgb(61, 89, 122) 50%, rgb(17, 36, 61) 75%);
+}
 @media screen and (max-width:700px){
-    *{
-        font-size:medium;
-    } 
+   *{
+       font-size:medium;
+   } 
 }
 @media screen and (max-width:350px){
-    *{
-        font-size:small;
-    } 
+   *{
+       font-size:small;
+   } 
 }
+
+.text{
+   text-align: left;
+   padding-left: 130px;
+}
+.usertext{
+   color:black;
+}
+.btn-style{
+   border-radius: 40px;
+   background:linear-gradient(to left, rgb(23, 60, 226) , rgb(65, 173, 223) );
+   padding: 3px 40px;
+   color: rgb(251, 251, 251);
+   border-color: darkblue;
+}
+.btn-style:hover{
+   background:linear-gradient(to left, rgb(9, 30, 126) , rgb(19, 84, 114) );
+}
+.button-edit{
+   border-radius: 40px;
+   background:linear-gradient(to left, rgb(76, 107, 3) , rgb(115, 134, 44) );
+   padding: 3px 40px;
+   color: rgb(251, 251, 251);
+   border-color: darkblue;
+}
+
+.button-delete{
+   border-radius: 40px;
+   background:linear-gradient(to left, rgb(236, 43, 53) , rgb(116, 4, 4) );
+   padding: 3px 40px;
+   color: rgb(251, 251, 251);
+   border-color: darkblue;
+}
+
+

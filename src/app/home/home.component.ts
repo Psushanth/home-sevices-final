@@ -22,4 +22,7 @@ formsubmit(ref){
 console.log(ref.value)
  this.router.navigateByUrl(`/mainservices/${this.users.indexOf(locationObj.location)}`)
 }
+gotologin(){
+  return this.router.navigateByUrl("/login")
+}
 }

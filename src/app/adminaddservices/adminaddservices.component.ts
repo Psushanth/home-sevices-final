@@ -30,6 +30,10 @@ this.router.navigateByUrl("/home")
     )
   
   }
+  logout(){
+    localStorage.clear();
+    this.router.navigateByUrl("/login")
+  }
   
 
   file:File;
@@ -117,9 +121,34 @@ update(serviceId){
       console.log(err)
     }
   )
- }
+
+  var newObjcart={
+    subservice:serviceObj.subservice,
+    price:serviceObj.price,
+    status:false,
+    image:serviceObj.image
+      };
+  
+      console.log(newObjcart)  
+  this.us.deletecartfrmadmin(newObjcart).subscribe(
+    (res)=>{
+      if(res["message"]=="deleted the service"){
+      alert("Deleted a service in cart")
+      let currentUrl = this.router.url;
+      this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+          this.router.navigate([currentUrl]);
+      });
+  
+ }else{
+  alert("something went Wrong")
+}
+},
+(err)=>{
+console.log(err)
+}
+)
 
 
 
- 
+}
 }

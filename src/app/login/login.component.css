@@ -1,3 +1,12 @@
+
+*{
+    font-family:'Neuton', serif;
+    font-weight:500;
+    font-size:20px;
+    letter-spacing: 0.5pt;
+    word-spacing: 1pt;
+   
+  }
 .backgrnd{
     background-image: url("../../assets/images/carpenter-doing-calculation.jpg");
  height: 800px;
@@ -20,4 +29,7 @@
 }
 .btn-style:hover{
     background:linear-gradient(to left, rgb(9, 30, 126) , rgb(19, 84, 114) );
+}
+.border-top{
+    border-top:1px solid rgb(153, 148, 148);
 }

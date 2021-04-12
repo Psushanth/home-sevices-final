@@ -1,0 +1,28 @@
+*{
+    font-family:'Neuton', serif;
+    font-weight:500;
+    font-size:20px;
+    letter-spacing: 0.5pt;
+    word-spacing: 1pt;
+   
+  }
+.bg-container{
+    background-image: url("https://ak.picdn.net/shutterstock/videos/31506349/thumb/12.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0 100px;
+}
+
+.bgrd{
+    float: right;
+    padding-left: 50px;
+}
+.button-update{
+    background-color:rgb(98, 98, 250);
+    color: white;
+}
+.button-update:hover{
+    background-color:rgb(74, 74, 209);
+    color: rgb(255, 255, 255);
+}

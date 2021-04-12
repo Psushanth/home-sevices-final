@@ -9,14 +9,17 @@ const Cart=require("../models/cart")
 
 cartApiObj.use(exp.json())
 //http:localhost:8080/user/createuser
-cartApiObj.post("/addtocart",errorHandler(async (req,res)=>{
-     if(req.body!=null){
-       
+cartApiObj.post("/addtocart",errorHandler(async (req,res)=>{console.log(req.body)
+    let cartfind=await Cart.findOne({$and:[{username:req.body.username},{subservice:req.body.subservice},{status:true}]})
+      if(cartfind==null){
+       console.log(cartfind)
     //create user obj for User model
     let cartObj=new Cart({
         username:req.body.username,
+       mainservice:req.body.mainservice,
         subservice:req.body.subservice,
         status:true,
+        quantity:1,
         price:req.body.price,
         image:req.body.image
             })
@@ -25,9 +28,27 @@ cartApiObj.post("/addtocart",errorHandler(async (req,res)=>{
     let result =await cartObj.save()
     res.send({message:"added to the cart"})
 
-         } else{   res.send({message:"services are not added"})}
+         } else{   res.send({message:"service already exist"})}
     
 }))
+
+
+cartApiObj.put("/addquantitytocart",errorHandler(async (req,res)=>{
+    await Cart.updateOne({$and:[{username:req.body.username},{subservice:req.body.subservice},{status:true}]},
+        { $set:{quantity:req.body.quantity}}
+        )
+        res.send({message:"added to the cart"})
+}))
+    
+
+cartApiObj.put("/removequantitytocart",errorHandler(async (req,res)=>{
+    await Cart.updateOne({$and:[{username:req.body.username},{subservice:req.body.subservice},{status:true}]},
+        { $set:{quantity:req.body.quantity}}
+        )
+        res.send({message:"removed to the cart"})
+}))
+
+
 
 
 cartApiObj.get("/getservicesfrmcart/:username",errorHandler(async (req,res)=>{
@@ -47,10 +68,21 @@ cartApiObj.put("/deletefrmcart",errorHandler(async (req,res)=>{
 
     
 
-       await Cart.updateOne({$and:[{subservice:req.body.subservice},{status:true}]},
+       await Cart.updateOne({$and:[{username:req.body.username},{subservice:req.body.subservice},{status:true}]},
         {status:req.body.status}
         )
        res.send({message:"deleted the service"})
+
+
+}))
+
+cartApiObj.put("/cartdeletefrmadmin",errorHandler(async (req,res)=>{
+
+
+    await Cart.updateMany({$and:[{subservice:req.body.subservice},{status:true}]},
+     { $set: {status:req.body.status}}
+     )
+    res.send({message:"deleted the service"})
 
 
 }))

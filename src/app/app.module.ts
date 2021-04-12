@@ -17,9 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FooterComponent } from './footer/footer.component';
 import { UpdateComponent } from './update/update.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {ToastrModule} from 'ngx-toastr';
-import { MainservicesComponent } from './mainservices/mainservices.component'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MainservicesComponent } from './mainservices/mainservices.component';
+import { ServicesdescriptionComponent } from './servicesdescription/servicesdescription.component';
+import { SuccessComponent } from './success/success.component'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,10 @@ import { MainservicesComponent } from './mainservices/mainservices.component'
 
     FooterComponent,
     UpdateComponent,
-    MainservicesComponent
+    MainservicesComponent,
+    ServicesdescriptionComponent,
+    SuccessComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,10 +49,8 @@ import { MainservicesComponent } from './mainservices/mainservices.component'
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
-     
-    
-    })
+
+   
 
   ],
   providers: [],

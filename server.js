@@ -19,11 +19,13 @@ const adminApiObj=require("./APIS/admin-api")
 const servicesApiObj=require("./APIS/services-api")
 const cartApiObj=require("./APIS/cart-api")
 const professionalApiObj=require("./APIS/professional-api")
+
 app.use("/user",userApiObj)
 app.use("/admin",adminApiObj)
 app.use("/services",servicesApiObj)
 app.use("/cart",cartApiObj)
 app.use("/professional",professionalApiObj)
+//app.use("/orders",ordersApiObj)
 
 //middleware to deal with invalid paths
 app.use((req,res,next)=>
@@ -34,5 +36,5 @@ app.use((err,req,res,next)=>
 {res.send({message:"error occuered",reason:err.message})})  
  
 
-const port=process.env.PORT;
+const port=process.env.PORT||8080;
 app.listen(port,()=>{console.log(`web server listening on port ${port}`)})

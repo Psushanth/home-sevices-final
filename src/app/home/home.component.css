@@ -1,4 +1,11 @@
-
+*{
+  font-family:'Neuton', serif;
+  font-weight:500;
+  font-size:23px;
+  letter-spacing: 0.5pt;
+  word-spacing: 2pt;
+ 
+}
 
 .head-banner{
   background-color:#e6ad27
@@ -15,13 +22,13 @@
     position: absolute;
     border-radius: 15px;
  
-    background: linear-gradient(#6d7d80fb,#0d222c98);
+    background: linear-gradient(rgb(56, 51, 100),rgb(30, 188, 209));
     color:rgb(255, 255, 255);
    
      padding: 30px 60px;
-top: 45%;
-left: 50%;
-transform: translate(-50%, -50%);
+top: 80%;
+left: 56%;
+transform: translate(-10%, -10%);
   }
   .text-block h4{
     text-align: center;
@@ -47,7 +54,7 @@ transform: translate(-50%, -50%);
     max-width: 1350px;
     margin: auto;
     height: 600px;
-    background-image: url("../../assets/images/homeimage2.png");
+    background-image: url("https://atemplate.com.ng/wp-content/uploads/2020/06/Service-Finder-Provider-and-Business-Listing-WordPress-Theme-1024x414.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -72,7 +79,7 @@ transform: translate(-50%, -50%);
 
 .container4{
  
-  background: linear-gradient(#6d7d80,#0d222c98);
+  background: linear-gradient(rgb(80, 75, 116),rgb(135, 200, 209));
   
 }
 #button-color{
@@ -87,4 +94,7 @@ transform: translate(-50%, -50%);
   background: linear-gradient(rgb(55, 83, 55),rgb(43, 160, 43)) ;
   border: 1px solid rgb(4, 121, 4);
 }
-
+div.gap-5:hover{
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.287);
+  transform: scale(1.3rem);
+}

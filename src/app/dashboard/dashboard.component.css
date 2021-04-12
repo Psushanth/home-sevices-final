@@ -1,0 +1,93 @@
+  
+*{
+  font-family:'Neuton', serif;
+  font-weight:500;
+  font-size:23px;
+  letter-spacing: 0.5pt;
+  word-spacing: 1pt;
+ 
+}
+
+#searchbox{
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.287);
+    padding: 10px 30px;
+    margin:0 -20px;
+    border:1px solid white;
+}
+.card-text{
+  font-size: 20px;
+
+}
+.sidenav {
+    border-radius: 20px;
+    position:absolute;
+    top: 20px;
+    left: 10px;
+    background: rgb(46, 72, 78);
+    margin-top: 200px;
+    padding: 30px 40px;
+
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fbfdff;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #4dd4ce;
+  }
+  
+  .main {
+    margin-left: 350px; /* Same width as the sidebar + left position in px */
+     /* Increased text to enable scrolling */
+   height: 2000px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .filter{
+      margin-top: 50px;
+      border:1px solid #b0e2e9;
+      background-color: rgb(8, 53, 65);
+      border-radius: 30px;
+      padding:5px 60px;
+      color: #fbfdff;
+  }
+  .filter:hover{
+    background-color: rgb(37, 116, 138);
+  }
+  footer{
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+  }
+ .cart:hover {
+  position: relative;
+    text-decoration: none;
+    color: #d60e96;
+  }
+  
+ span.cart-basket {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 170px;
+    right: 480px;
+    width: 15px;
+    height: 15px;
+    color: rgb(255, 255, 255);
+  background-color: rgb(32, 129, 23);
+  padding: 15px;
+    border-radius: 50%;
+  }
+  .fa,
+.fas {
+  font-family: 'FontAwesome';
+}

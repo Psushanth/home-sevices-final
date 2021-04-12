@@ -10,10 +10,9 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   loginForm:FormGroup
   submitted:boolean
-  constructor(private us:ServiceService, private router:Router,private toastr:ToastrService) { }
+  constructor(private us:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
     this.loginForm=new FormGroup({
@@ -83,6 +82,9 @@ this.us.getadminlogin(this.loginForm.value).subscribe(
 }
     
  
+}
+goto(){
+  return this.router.navigateByUrl("/signup")
 }
 // changetype(e) {
  

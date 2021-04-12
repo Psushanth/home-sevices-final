@@ -1,20 +1,20 @@
 
 
 <div class="container4">
-   <div class="container1">
+ <div class="container1">
 
    <div class="text-block">
        
        <h4>Where do you need a service?</h4>
 
+       <div class="text-center m-3"><h5 >Select a city</h5></div>
 <form #ref="ngForm" (ngSubmit)="formsubmit(ref)">
-   <div class="form-floating">
+   <div class="form-group">
       <select class="form-select" name="location" id="floatingSelect" ngModel>
          <option [value]="user" *ngFor="let user of users"  selected>{{user}}</option>
       </select>
-      <label for="floatingSelect" ><h5>Select city</h5></label>
       <div class="text-center">
-      <button id="button-color" value="submit btn btn-success" >
+      <button id="button-color" (click)="gotologin()" value="submit btn btn-success" >
          search
 </button></div>
 </div>
@@ -23,17 +23,13 @@
 </div>
 </div>
 
+
     <div class="container2">
-     <div class="row g-0">
+     <div class="row mx-5">
        <div class="col-md-6 mt-4 animate__animated animate__fadeInDown">
          <img src="https://www.appdupe.com/img/urbanclap/banner_main.png" width="400px" height="300px" alt="">
        </div>
-       <div class="col-md-6 animate__animated animate__backInRight">
-            <div class="" style="font-size: 22px; word-spacing: 20%;">
-               <h1 class="mx-2 mt-5" style="font-size:30px; font-weight: bolder;">Target local audience marketplace</h1>
-               <p>Local service provider apps like UrbanClap target the local audience and provide beneficial and quick services to the local audience. </p>
-       </div>
-       </div>
+      
  
  
    <div class="row mt-5 animate__animated animate__backInLeft" style="font-size: 22px;">

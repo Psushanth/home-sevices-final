@@ -57,11 +57,14 @@ services=["cleaning","plumbing","carpenter","painter","saloon for men","saloon f
           localStorage.clear()
           //navigate to loin
           this.router.navigateByUrl("/login")
+
         }
         else{
           
         if(res['message'] == 'Updated the service'){
           alert(res['message'])
+       
+          this.router.navigateByUrl("/adminaddservices")
         }
         else{
           alert(res['message'])

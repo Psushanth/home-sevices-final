@@ -30,4 +30,18 @@ profApiObj.post("/createprof",errorHandler(async (req,res)=>{
     
 }))
 
+profApiObj.get("/getdetails",errorHandler(async (req,res)=>{
+   
+   
+    let proffind=await Professional.find()
+    if(proffind!=null){
+     res.send({message:proffind})
+     console.log(proffind)
+
+    }else{
+        res.send({message:"professional not assigned to your service"})
+    }
+
+    }))
+
 module.exports=profApiObj

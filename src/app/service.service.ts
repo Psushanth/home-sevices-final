@@ -32,8 +32,14 @@ return this.hc.post("/admin/adminlogin",userObj)
      return this.hc.get("services/getservices")
    }
    addtocart(cartObj):Observable<any>{
-     return this.hc.post("/cart/addtocart",cartObj)
+     return this.hc.post(`/cart/addtocart`,cartObj)
    }
+   addquantitytocart(cartObj):Observable<any>{
+     return this.hc.put("/cart/addquantitytocart",cartObj)
+   }
+   removequantitytocart(cartObj):Observable<any>{
+    return this.hc.put("/cart/removequantitytocart",cartObj)
+  }
    getservicetocart(username):Observable<any>{
 return this.hc.get(`/cart/getservicesfrmcart/${username}`)
    }
@@ -49,7 +55,14 @@ return this.hc.get(`/cart/getservicesfrmcart/${username}`)
    updateservices(serviceObj):Observable<any>{
         return this.hc.put("/services/updateservice",serviceObj)
       }
-      getmainservices(location):Observable<any>{
+   getmainservices(location):Observable<any>{
         return this.hc.get(`/services/getmainservices/${location}`)
           }
+   deletecartfrmadmin(serviceObj):Observable<any>{
+     return this.hc.put("/cart/cartdeletefrmadmin",serviceObj)
+   }
+   getprofessionaldetails():Observable<any>{
+     return this.hc.get("/professional/getdetails")
+   }
+  
 }

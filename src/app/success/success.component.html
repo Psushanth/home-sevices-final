@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="text-center m-4"><h1>Successfully Placed Order</h1></div>
+        <div>
+        <div class="text-center"><img class="border rnd" src="../../assets/images/professiona.jpg"
+            ><p><strong>Your Professional Details</strong></p></div>
+
+        <table class="table table-striped table-hover align-middle p-3">
+            <thead>
+            <tr>
+                <th>Prfessional Name</th>
+                <th>phone Number</th>
+                <th>skills</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let newprofd of newprof" >
+                    <td>{{newprofd.name}}</td>
+                    <td>{{newprofd.mobilenumber}}</td>
+        
+                    <td >
+                        <tr *ngFor="let skill of skills">git
+                            <td>{{skill}}</td></tr></td>
+                
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>

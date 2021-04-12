@@ -1,31 +1,55 @@
-<div class="container">
+<div class="container main">
     <div class="row mt-5">
         <div class="col-3">
             <h4>Hello {{username}}!!, Welcome to your Dashboard</h4>
         </div>
         <div class="col-5"></div>
-        <div class="col-2 my-3"><button class="btn btn-primary mr-4" (click)="bookings()">My Bookings</button></div>
+        
+       
+        <div class="col-2 my-3"><button class="btn btn-primary mr-4 cart" (click)="bookings()">My Bookings <i class="fas fa fa-shopping-cart fa-lg"></i></button>
+          <span class="cart-basket d-flex align-items-center justify-content-center">
+           {{numberofitems}}
+          </span></div>
         <div class="col-2 my-3">
-          <router-outlet></router-outlet>
            <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </div> </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <div class="form-floating mt-5">
+              <input type="text" class="form-control" id="searchbox" [(ngModel)]="mainservicename" (input)="search()">
+              <label for="searchbox" class="form-label">search</label>
+              
+          </div>
         </div>
     </div>
     <div class="d-flex flex-wrap justify-content-evenly mt-5" >
       <div class="col-4" *ngFor="let service of servicesArray">
-        <div class="card mt-5" style="width: 23rem; ">
-            <img [src]="service?.image" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-title text-center">{{service?.subservice}}</h4>
+        <div class="card mt-5" style="width: 23.1rem; height: auto;">
+            <img [src]="service?.image" style="width: 23rem; height: 15rem;" class="card-img-top" alt="...">
+            <div class="card-body" style="width: 23rem; height: 15rem;">
+              <h4 class="card-title text-center"><strong>{{service?.subservice}}</strong></h4>
               <h5 class="card-text text-center ">Price: {{service?.price}}</h5>
               <p class="card-text text-center">{{service?.discreption}}</p>
               <div class="text-center">
                 <button class="btn btn-primary " (click)="addtocart(service)">ADD</button>
                 
               </div>
-
+              
               
             </div>
           </div>
       </div>
     </div>
-</div>
+  </div>
+  
+  <aside class="sidenav">
+    <form  #ref="ngForm" (ngSubmit)="searchcategory(ref)">
+    <div *ngFor="let category of maincategories">
+     <a> <input type="checkbox" class="form-check-inline" [id]="category" [value]="category" [name]="category" ngModel >
+        <label [for]="category">{{category}}</label></a>
+
+    </div>
+    <div class="text-center"><button class="filter btn btn-secondary">FILTER</button></div>
+  </form>
+  </aside>
