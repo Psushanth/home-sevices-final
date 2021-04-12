@@ -92,7 +92,8 @@ this.router.navigateByUrl("/home")
   search(){
     if(this.mainservicename!=""){
     this.servicesArray=this.servicesArray.filter(res=>{
-      return (res.subservice.toLocaleLowerCase().match(this.mainservicename.toLocaleLowerCase()))||(res.mainservice.toLocaleLowerCase().match(this.mainservicename.toLocaleLowerCase()))
+      return (res.subservice.toLocaleLowerCase().match(this.mainservicename.toLocaleLowerCase()))||
+      (res.mainservice.toLocaleLowerCase().match(this.mainservicename.toLocaleLowerCase()))
     })}
     else{
       this.ngOnInit();
