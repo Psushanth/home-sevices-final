@@ -6,11 +6,13 @@
   word-spacing: 2pt;
  
 }
-
-.head-banner{
-  background-color:#e6ad27
-
+.backgrnd{
+  background: linear-gradient(#4c737a,#1aa2e0);
 }
+.container{
+  background-color: white;
+}
+
 .head-banner p{
   text-align: center;
 }
@@ -19,16 +21,12 @@
 
 }
 .text-block {
-    position: absolute;
     border-radius: 15px;
  
     background: linear-gradient(rgb(56, 51, 100),rgb(30, 188, 209));
     color:rgb(255, 255, 255);
-   
-     padding: 30px 60px;
-top: 80%;
-left: 56%;
-transform: translate(-10%, -10%);
+     padding: 30px 30px;
+     transform: translate(-10%, -10%);
   }
   .text-block h4{
     text-align: center;
@@ -49,7 +47,69 @@ transform: translate(-10%, -10%);
       border-radius: 10px;
   }
 
-.container1{
+  .border{
+    border: 2px solid rgb(253, 248, 248);
+    
+  }
+
+@media screen and (min-width:500px) {
+  .img-fluid{
+    width: 100%;
+    height: auto;
+    display:block;
+  }
+  .img-fluid1{
+    width: 400px;
+    height: auto;
+    display:block;
+    margin: 30px 50px;
+  }
+  .img-fluid-temp{
+    width: 20%;
+    height: auto;
+    display:block;
+}
+.img-fluid-warn{
+  width: 20%;
+  height: auto;
+  display:block;
+}
+}
+@media screen and (max-width:500px) {
+  .img-fluid{
+    width: 110%;
+    height: auto;
+    display:block;
+  }
+  .img-fluid1{
+    width: 100%;
+    height: auto;
+    display:block;
+    margin: 30px 0px;
+  }
+  .img-fluid-temp{
+    width: 25%;
+    height: auto;
+    display:block;
+}
+.img-fluid-warn{
+  width: 50%;
+  height: auto;
+  display:block;
+}
+.text-block {
+ 
+  margin: 30px 10px;
+  margin-left: 90px;
+}
+
+}
+.text-block{
+  border: 1px;
+  border-radius: 30px;
+  background-color:linear-gradient(rgb(80, 75, 116),rgb(135, 200, 209));
+}
+/* .container1{
 
     max-width: 1350px;
     margin: auto;
@@ -58,10 +118,10 @@ transform: translate(-10%, -10%);
     background-repeat: no-repeat;
     background-size: cover;
 
-}
+} */
 
 
-.container2{
+/* .container2{
 
   max-width: 1350px;
   margin: auto;
@@ -75,7 +135,7 @@ transform: translate(-10%, -10%);
   background-color: white;
   padding-left: 20px;
   padding-right: 5px;
-}
+} */
 
 .container4{
  

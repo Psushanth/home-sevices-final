@@ -1,11 +1,5 @@
 <style>
-    .container {
-        margin: auto;
-        width: 50%;
-        padding: 50px;
-        
     
-    }
     .bg-color{
        background-image: url(../../assets/images/backgrnd\ login.jpg);
        background-repeat: no-repeat;
@@ -15,10 +9,10 @@
     }
 </style>
 <div class="bg-color">
-<div class="container">
+<div class="container pt-5 pt-md-5">
     <div class="row ">
-        <div class="col-4"></div>
-<div class="col-8 ">
+        <div class="col-1 col-md-5"></div>
+<div class="col-10 col-md-5">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-floating mb-3">
             <input type="text" id="name" class="form-control" formControlName="name" name="name" >

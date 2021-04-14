@@ -1,17 +1,18 @@
 <div class="container main">
     <div class="row mt-5">
-        <div class="col-3">
-            <h4>Hello {{username}}!!, Welcome to your Dashboard</h4>
+        <div class="col-2 col-md-3">
+            <h4>Welcome {{username}}!!</h4>
         </div>
-        <div class="col-5"></div>
+        <div class="col-3 col-md-4"></div>
         
-       
-        <div class="col-2 my-3"><button class="btn btn-primary mr-4 cart" (click)="bookings()">My Bookings <i class="fas fa fa-shopping-cart fa-lg"></i></button>
-          <span class="cart-basket d-flex align-items-center justify-content-center">
+       <div class="cart-container col-2 col-md-2  ">
+        <div class="cart"><button class="btn btn-primary1 " (click)="bookings()"><span class="cart-hide">My Bookings </span><i class="fas fa fa-shopping-cart fa-lg"></i></button></div>
+          <div class="cart-basket d-flex align-items-center justify-content-center">
            {{numberofitems}}
-          </span></div>
-        <div class="col-2 my-3">
-           <button class="btn btn-danger" (click)="logout()">Logout</button>
+          </div></div>
+          <div class="col-2 col-md-0"></div>
+        <div class="col-2 col-md-1  ">
+           <button class="bttnout" (click)="logout()">Logout</button>
         </div> </div>
         <div class="row">
           <div class="col-3"></div>
@@ -23,16 +24,33 @@
           </div>
         </div>
     </div>
-    <div class="d-flex flex-wrap justify-content-evenly mt-5" >
-      <div class="col-4" *ngFor="let service of servicesArray">
-        <div class="card mt-5" style="width: 23.1rem; height: auto;">
-            <img [src]="service?.image" style="width: 23rem; height: 15rem;" class="card-img-top" alt="...">
-            <div class="card-body" style="width: 23rem; height: 15rem;">
-              <h4 class="card-title text-center"><strong>{{service?.subservice}}</strong></h4>
+    </div>
+    <div class="row">
+      <div class="col-10 mx-4 col-md-2 mx-md-3 ">
+      
+          <aside class="sidenav ">
+            <form  #ref="ngForm" (ngSubmit)="searchcategory(ref)">
+            <div *ngFor="let category of maincategories">
+             <a> <input type="checkbox" class="form-check-inline" [id]="category" [value]="category" [name]="category" ngModel >
+                <label [for]="category">{{category}}</label></a>
+        
+            </div>
+            <div class="text-center"><button class="filter btn btn-secondary">FILTER</button></div>
+          </form>
+          </aside>
+      
+      </div>
+      <div class="col-8">
+    <div class="d-flex flex-wrap justify-content-evenly mx-5 m-md-3" >
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let service of servicesArray">
+        <div class="card mt-3 m-md-5" >
+            <img [src]="service?.image"  class="card-img-top" alt="...">
+            <div class="card-body" >
+              <h4 class="card-title text-center"><b>{{service?.subservice}}</b></h4>
               <h5 class="card-text text-center ">Price: {{service?.price}}</h5>
-              <p class="card-text text-center">{{service?.discreption}}</p>
+              <p class="card-description text-center">{{service?.discreption}}</p>
               <div class="text-center">
-                <button class="btn btn-primary " (click)="addtocart(service)">ADD</button>
+                <button class="bttnadd" (click)="addtocart(service)">ADD</button>
                 
               </div>
               
@@ -40,16 +58,7 @@
             </div>
           </div>
       </div>
-    </div>
+    </div></div>
   </div>
+ 
   
-  <aside class="sidenav">
-    <form  #ref="ngForm" (ngSubmit)="searchcategory(ref)">
-    <div *ngFor="let category of maincategories">
-     <a> <input type="checkbox" class="form-check-inline" [id]="category" [value]="category" [name]="category" ngModel >
-        <label [for]="category">{{category}}</label></a>
-
-    </div>
-    <div class="text-center"><button class="filter btn btn-secondary">FILTER</button></div>
-  </form>
-  </aside>

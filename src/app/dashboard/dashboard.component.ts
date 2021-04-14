@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     let tokenverify=localStorage.getItem("token")
     if(tokenverify==null){
-      alert("Unauthorized access")
+      alert("Please login to access dashboard")
 this.router.navigateByUrl("/home")
     }
     this.us.getservices().subscribe(
@@ -159,9 +159,9 @@ this.router.navigateByUrl("/home")
     
     })}
     else    if( this.selectedcategory["pest control"]==true){
-      console.log("in comp search category ",this.selectedcategory["saloon for women"])
+      console.log("in comp search category ",this.selectedcategory["pest control"])
   
-        let selectedvalue="saloon for women";
+        let selectedvalue="pest control";
       
     this.servicesArray=this.servicesArray.filter(res=>{
       return res.mainservice.toLocaleLowerCase().match(selectedvalue.toLocaleLowerCase())

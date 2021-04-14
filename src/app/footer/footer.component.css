@@ -33,3 +33,9 @@
     background: #125688;
     color: white;
   }
+  @media screen and (max-width:500px) {
+    .ftr{
+      font-size: 0.8rem;
+      
+    }
+  }

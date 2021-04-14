@@ -1,56 +1,68 @@
 
-
-<div class="container4">
- <div class="container1">
-
-   <div class="text-block">
-       
-       <h4>Where do you need a service?</h4>
-
-       <div class="text-center m-3"><h5 >Select a city</h5></div>
-<form #ref="ngForm" (ngSubmit)="formsubmit(ref)">
-   <div class="form-group">
-      <select class="form-select" name="location" id="floatingSelect" ngModel>
-         <option [value]="user" *ngFor="let user of users"  selected>{{user}}</option>
-      </select>
-      <div class="text-center">
-      <button id="button-color" (click)="gotologin()" value="submit btn btn-success" >
-         search
-</button></div>
+   <div class="backgrnd">
+   <div class="container">
+        <div class="row">
+           <div class="col-sm-12 col-lg-12">
+            <img src="https://atemplate.com.ng/wp-content/uploads/2020/06/Service-Finder-Provider-and-Business-Listing-WordPress-Theme-1024x414.jpg"  class="img-fluid" alt="">
+           </div>
+        </div>
+     </div>   
+     
+     
+     
+     <div class="container">
+   
+    <div class="row justify-content-around align-items-center">
+      <div class="col-sm-12 col-lg-6 ml-4 animate__animated animate__fadeInDown">
+        <img src="https://www.appdupe.com/img/urbanclap/banner_main.png" class="img-fluid1 " alt="">
+      </div>
+      <div class="text-block   col-10 col-lg-6 ">
+          
+          <h4>Where do you need a service?</h4>
+      
+          <div class="text-center m-3"><h5 >Select a city</h5></div>
+      <form #ref="ngForm" (ngSubmit)="formsubmit(ref)">
+      <div class="form-group">
+         <div class="d-flex justify-content-center">
+         <select class="form-select " name="location" id="floatingSelect" ngModel>
+            <option [value]="user" *ngFor="let user of users"  selected>{{user}}</option>
+         </select></div>
+         <div class="text-center">
+         <button id="button-color" (click)="gotologin()" value="submit btn btn-success" >
+            search
+      </button></div>
+      </div>
+      </form>
+      
+      </div>
 </div>
-</form>
-
-</div>
-</div>
 
 
-    <div class="container2">
-     <div class="row mx-5">
-       <div class="col-md-6 mt-4 animate__animated animate__fadeInDown">
-         <img src="https://www.appdupe.com/img/urbanclap/banner_main.png" width="400px" height="300px" alt="">
-       </div>
+
+
+
       
  
  
    <div class="row mt-5 animate__animated animate__backInLeft" style="font-size: 22px;">
-     <div class="col-sm-6 mt-6 " style="font-size: 22px;word-spacing: 20%;">
+     <div class="col-sm-6  m-3 m-lg-0" style="font-size: 22px;word-spacing: 20%;">
        
        <h1  class="text-left" style="font-weight: bolder; font-size: 30px;font-style: italic;" >Provide personalized and loyal service</h1>
        <p>Local service provider app offers more personalization services to their customers. It helps to build loyal service providers and solves customers problems without delay.</p>
      </div>
-     <div class="col-sm-6 me-0">
-       <img src="https://www.fusioninformatics.com/blog/wp-content/uploads/2019/07/app-like-urbanclap-features.jpg" width="500px" alt="">
+     <div class="col-sm-6 m-lg-0 ">
+       <img src="https://www.fusioninformatics.com/blog/wp-content/uploads/2019/07/app-like-urbanclap-features.jpg"  class="img-fluid" alt="">
      </div>
    </div>       
    
-   <div class="row g-0 mt-5">
-     <div class="col-md-6 animate__animated animate__fadeInUp">
-       <img src="https://mobisoftinfotech.com/resources/wp-content/uploads/2018/08/Urbanclap.png" width="450px" alt="">
+   <div class=" row ">
+     <div class="col-sm-6  m-3 m-lg-0  animate__animated animate__fadeInUp">
+       <img src="../../assets/images/urbanclap.png" class="img-fluid " alt="">
      </div>
-     <div class=" col-md-6 animate__animated animate__backInRight">
+     <div class=" col-sm-6  m-3 m-lg-0 animate__animated animate__backInRight">
           <div class="" style="font-size: 22px; word-spacing: 20%;">
-             <h1 class="mx-2 mt-6" style="font-size:30px; font-weight: bolder;">Build Network</h1>
-             <p >This app helps the local vendors to build a great network with the clients by providing excellent services .</p>
+             <h1 class="mx-5 mt-6" style="font-size:30px; font-weight: bolder;">Build Network</h1>
+             <p class="mx-5">This app helps the local vendors to build a great network with the clients by providing excellent services .</p>
      </div>
      </div>
      </div>
@@ -64,42 +76,43 @@
      <div class="col-sm-6" > 
         <h2 style="font-weight: bolder;">Why Urban Company?</h2> 
         <div class="d-flex flex-row bd-highlight mb-3 mt-4 gap-5">
-           <img class="flip-scale-up-hor" src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_29614d40.png" alt="" itemscope="" width="10%" itemprop="image">
+           <img class="flip-scale-up-hor " src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_29614d40.png" class="img-fluid-temp" alt="" itemscope=""  itemprop="image">
            <div>
-              <h6>Transparent Pricing</h6>
-              <p>See fixed prices before your book.No hidden changes</p>
+              <h6 class="mx-4">Transparent Pricing</h6>
+              <p class="mx-4">See fixed prices before your book.No hidden changes</p>
            </div>
         </div>                                           
 
         <div class="d-flex flex-row bd-highlight mb-3 gap-5"> 
-           <img class="" src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_2cc7d0d0.png" alt="" itemscope="" width="10%" itemprop="image">
+           <img class="" src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_2cc7d0d0.png"  class="img-fluid-temp"alt="" itemscope=""  itemprop="image">
            <div>
-              <h6>Experts only</h6>
-              <p>Our professionals are well trained and have on-job expertise</p>
+              <h6 class="mx-4">Experts only</h6>
+              <p class="mx-4">Our professionals are well trained and have on-job expertise</p>
            </div>
         </div>
         
         <div class="d-flex flex-row bd-highlight mb-3 gap-5"> 
-           <img class="" src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_2caafa00.png" alt="" itemscope="" width="10%" left itemprop="image">
+           <img class="" src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_2caafa00.png" class="img-fluid-temp" alt="" itemscope="" left itemprop="image">
            <div>
-              <h6>Fully Equipped</h6>
-              <p>We bring everything needed to get the job done well</p>
+              <h6 class="mx-4">Fully Equipped</h6>
+              <p class="mx-4">We bring everything needed to get the job done well</p>
            </div> 
         </div>
      </div>
-     <div class="col-sm-6 p-4  animate__animated animate__flash delay">
+     <div class="col-sm-6 p-4  animate__animated animate__flash delay justify-content-center">
         <div class="row d-flex g-4">
            <div class="col">
-              <div class="card h-100 p-5 bg-light">
-                 <img class="" src="https://res.cloudinary.com/urbanclap/image/upload/q_20,f_auto/categories/category_v2/category_cb4d9130.png" width="20%" alt="">
+              <div class="card p-5 bg-light">
+                 <img class="" src="https://res.cloudinary.com/urbanclap/image/upload/q_20,f_auto/categories/category_v2/category_cb4d9130.png" class="img-fluid-warn"  alt="">
                  <div class="card-body">
-                    <h5 class="card-title">100% Quality Assured</h5>
+                    <h5 class="card-title ">100% Quality Assured</h5>
                     <p class="card-text">If you don't love our service,we will make it right.</p>
                  </div>
               </div>
            </div>
         </div>
      </div>
+   </div>
    </div>
  
  
