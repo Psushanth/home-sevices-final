@@ -46,7 +46,7 @@ userApiObj.post("/userlogin",errorHandler( async (req,res)=>{
     res.send({message:"invalid password"})
     }
     else{
-        let signedToken= await jwt.sign({name:userFromDb.name},process.env.SECRET,{expiresIn:100})
+        let signedToken= await jwt.sign({name:userFromDb.name},process.env.SECRET,{expiresIn:1000})
         res.send({message:"login success",token:signedToken,name:userFromDb.name})
     }
 }))

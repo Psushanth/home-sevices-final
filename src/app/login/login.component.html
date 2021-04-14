@@ -25,7 +25,7 @@
                    <div *ngIf="(getControls().name.pristine  || getControls().name.invalid) && (getControls().name.dirty ||  getControls().name.touched)"
                    class=" text-danger">
                    <p *ngIf="getControls().name.errors?.required">*Name is required.</p>
-                   <p  *ngIf="getControls().name.errors?.minlength">Name must be at least 4 characters long.</p>
+                   <p  *ngIf="getControls().name.errors?.minlength">Name must be at least 5 characters long.</p>
                    
                 </div>
                 <label for="adminname " class="usertext">User Name</label>
