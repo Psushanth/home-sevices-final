@@ -38,7 +38,7 @@ var upload = multer({ storage: storage })
 servicesApiObj.post("/createservices",upload.single('image'),errorHandler(async (req,res)=>{
    
    
-    let servicefind=await Services.findOne({serviceId:req.body.serviceId})
+    let servicefind=await Services.findOne({$and:[{serviceId:req.body.serviceId},{status:true}]})
     
     if(servicefind==null){
      

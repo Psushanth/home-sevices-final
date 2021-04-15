@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
     let tokenverify=localStorage.getItem("token")
     if(tokenverify==null){
       alert("Please login to access dashboard")
-this.router.navigateByUrl("/home")
+this.router.navigateByUrl("/login")
     }
     this.us.getservices().subscribe(
       (res)=>{
@@ -45,6 +45,9 @@ this.router.navigateByUrl("/home")
    console.log(err)}
    )
   }
+
+
+  
   logout(){
     localStorage.clear()
     this.router.navigateByUrl(`/login`)

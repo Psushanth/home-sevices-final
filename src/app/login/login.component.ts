@@ -70,7 +70,7 @@ this.us.getadminlogin(this.loginForm.value).subscribe(
         }
         
         else{
-         alert("Admin data not found ...please register!!")
+         alert("user data not found ...please register!!")
          this.router.navigateByUrl("/signup")
         }
       },

@@ -61,15 +61,28 @@ export class MybookingsComponent implements OnInit {
           Validators.required]),
           cardname:new FormControl(null, [
             Validators.required]),
+          city:new FormControl(null,[
+            Validators.required
+          ]),
+          state:new FormControl(null, [
+            Validators.required
+          ]),
+          zip:new FormControl(null, [
+            Validators.required
+          ]),
             cardnumber:new FormControl(null, [
               Validators.required,
              Validators.maxLength(12),
              Validators.minLength(12),
             Validators.pattern("[0-9]*$")]),
               expmonth:new FormControl(null, [
-                Validators.required]),
+                Validators.required,
+                Validators.pattern("[a-z]*$")]),
+                
                 expyear:new FormControl(null, [
-                  Validators.required]),
+                  Validators.required,
+                  Validators.minLength(4),
+                  Validators.maxLength(4)]),
                   cvv:new FormControl(null, [
                     Validators.required,
                     Validators.maxLength(3),

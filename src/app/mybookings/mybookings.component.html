@@ -72,11 +72,11 @@
                 <div class="row">
                   <div class="col-50">
                     <label for="state">State</label>
-                    <input type="text" id="state" name="state"  placeholder="LN">
+                    <input type="text" id="state" name="state" formControlName="state"  placeholder="LN">
                   </div>
                   <div class="col-50">
                     <label for="zip">Zip</label>
-                    <input type="text" id="zip" name="zip"  placeholder="100651">
+                    <input type="text" id="zip" name="zip" formControlName="zip"  placeholder="100651">
                   </div>
                 </div>
               </div>
@@ -105,6 +105,10 @@
                   <div class="col-50">
                     <label for="expyear">Exp Year</label>
                     <input type="text" id="expyear" name="expyear" formControlName="expyear" placeholder="2021">
+                    <div *ngIf="(getControls().cardnumber.pristine  || getControls().cardnumber.invalid) && (getControls().cardnumber.dirty ||  getControls().cardnumber.touched)" class=" text-danger mb-3">
+                      <div *ngIf="getControls().cardnumber.errors?.maxlength || getControls().cardnumber.errors?.minlength || getControls().cardnumber.errors?.pattern ">*type a valid year</div>
+                      <div *ngIf="getControls().cardnumber.errors?.required">*year is required.</div>
+                  </div>
                   </div>
                   <div class="col-50">
                     <label for="cvv">CVV</label>
